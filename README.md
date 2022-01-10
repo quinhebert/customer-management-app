@@ -16,7 +16,7 @@ Delete a Customer (Rick was deleted from the customer database):
 ![Deleted Customer](https://github.com/quinhebert/customer-management-app/blob/master/images/Deleted%20Customer.png?raw=true)
 
 Add a Job for a Customer:
-![Add Job](https://github.com/quinhebert/customer-management-app/blob/master/images/Add%Job.png?raw=true)
+![Add Job](https://github.com/quinhebert/customer-management-app/blob/master/images/Add%20Job.png?raw=true)
 
 Customer Job History:
 ![Customer Job History](https://github.com/quinhebert/customer-management-app/blob/master/images/Job%20History.png?raw=true)
