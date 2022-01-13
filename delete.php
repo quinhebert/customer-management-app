@@ -1,6 +1,7 @@
 <?php
 include 'connect.php';
 
+//delete the customer and job history for the deleteid provided
 if(isset($_GET['deleteid'])){
     $id=$_GET['deleteid'];
 

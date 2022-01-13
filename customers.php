@@ -1,4 +1,7 @@
+
 <?php
+//Make connection to database
+
 include 'connect.php';
 ?>
 
@@ -29,7 +32,9 @@ include 'connect.php';
         </thead>
         <tbody>
 
+        
         <?php
+        // List all customers and their related info from the database
 
         $sql="SELECT * FROM customer";
         $result= $conn->query($sql);

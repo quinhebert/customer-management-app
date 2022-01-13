@@ -1,6 +1,8 @@
 <?php
+//Make connection to database
 include 'connect.php';
 
+//if the form is submitted, add the new customer to the database
 if(isset($_POST['submit'])){
     $name=$_POST['customerName'];
     $email=$_POST['customerEmail'];
@@ -10,6 +12,7 @@ if(isset($_POST['submit'])){
     $sql="INSERT INTO customer VALUES(NULL, '$name', '$email', '$phone', '$address')";
     $result = $conn->query($sql);
 
+    //go back to the customer display page
     if($result) {
         header('location:customers.php');
     }
@@ -22,7 +25,7 @@ if(isset($_POST['submit'])){
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -1,12 +1,15 @@
 <?php
+//make connection to the database
 include 'connect.php';
 
+//if the form is submitted, add the technician to the database
 if(isset($_POST['submit'])){
     $name=$_POST['technicianName'];
 
     $sql="INSERT INTO technician VALUES(NULL, '$name')";
     $result = $conn->query($sql);
 
+    //open the customer display page
     if($result) {
         header('location:customers.php');
     }

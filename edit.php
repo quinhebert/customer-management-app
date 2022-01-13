@@ -1,6 +1,8 @@
 <?php
+//make connection to database
 include 'connect.php';
 
+//get the current customer data to display in the text fields for the edit page
 $id=$_GET['editid'];
 $sql="SELECT * FROM customer WHERE custid=$id";
 $result = $conn->query($sql);
@@ -10,6 +12,7 @@ $email=$row['email'];
 $phone=$row['phone'];
 $address=$row['address'];
 
+//if the form is submitted, update the data for the customer with the new inputs
 if(isset($_POST['submit'])){
     $name=$_POST['customerName'];
     $email=$_POST['customerEmail'];
@@ -34,7 +37,7 @@ if(isset($_POST['submit'])){
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

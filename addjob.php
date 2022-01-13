@@ -1,5 +1,10 @@
 <?php
+//Make connection to database
+
 include 'connect.php';
+
+
+//if the form is submitted, add the job to the relevant customer's job history using their customer id
 
 $custid=$_GET['custid'];
 
@@ -14,6 +19,7 @@ if(isset($_POST['submit'])){
     $sql="INSERT INTO job VALUES(NULL, '$date', '$type', '$description', '$techid', '$custid')";
     $result = $conn->query($sql);
 
+    //open up the job history page for the customer after adding the job
     if($result) {
         header('location:jobs.php?custid='.$custid.'');
     }
@@ -29,7 +35,7 @@ if(isset($_POST['submit'])){
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -60,6 +66,7 @@ if(isset($_POST['submit'])){
                 <select class="form-select" aria-label="Default select example" name="techid" required>
                     <option value="">Choose Technician</option>
                     <?php
+                    //list the technicians in the database in the drop down menu
                     $sql="SELECT * FROM technician";
                     $result = $conn->query($sql);
                     if($result){

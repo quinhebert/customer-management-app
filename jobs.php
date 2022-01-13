@@ -1,4 +1,5 @@
 <?php
+//make connection to the database
 include 'connect.php';
 
 $id=$_GET['custid'];
@@ -33,6 +34,7 @@ $id=$_GET['custid'];
         <tbody>
 
         <?php
+        //list all of the jobs for the customer with the customer id 
 
         $sql="SELECT * FROM job WHERE custid=$id";
         $result= $conn->query($sql);
