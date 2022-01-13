@@ -1,4 +1,6 @@
 <?php
+//The search box has not been implemented yet
+
 include 'connect.php';
 ?>
 
